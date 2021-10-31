@@ -1,6 +1,5 @@
 package com.HilarioBazanToM.umbrellacorpz;
 
-
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -11,11 +10,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-public class CarritoDeCompras extends AppCompatActivity {
+public class listaDeCompras extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_compras);
+        setContentView(R.layout.activity_lista_de_compras);
 
         Toolbar toolbarCompras = findViewById(R.id.Compras_toolbar);
         setSupportActionBar(toolbarCompras);

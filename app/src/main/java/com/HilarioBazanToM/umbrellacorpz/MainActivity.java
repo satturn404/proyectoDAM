@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
 
             case R.id.item1:
-                Intent intentCompras = new Intent(getApplicationContext(),CarritoDeCompras.class);
+                Intent intentCompras = new Intent(getApplicationContext(),listaDeCompras.class);
                 startActivity(intentCompras);
                 return true;
         }
