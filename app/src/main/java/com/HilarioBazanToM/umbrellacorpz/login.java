@@ -38,7 +38,11 @@ public class login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if (task.isSuccessful()){
                             for (QueryDocumentSnapshot document : task.getResult()){
-                                Log.d("Exito",document.getId()+ " => " + document.getData());
+                                if (contrasenha.equals(document.getData().get("clave"))){
+                                    Log.d("exito","acceso consedido");
+                                }else{
+                                    Log.d("error","acceso consedido");
+                                }
                             }
                         }else{
                             Log.d("ERROR","error getting docments: ", task.getException());
