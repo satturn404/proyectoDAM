@@ -12,10 +12,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.UmbrellaCorpZ">
         <activity
-            android:name=".productos"
+            android:name=".MainActivity4"
             android:exported="true" />
         <activity
-            android:name=".listaDeCompras"
+            android:name=".MainActivity3"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity2"
             android:exported="true" />
         <activity
             android:name=".login"
@@ -28,7 +31,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -1,58 +1,50 @@
 package com.HilarioBazanToM.umbrellacorpz;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
+import android.util.Log;
+import android.view.View;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
+    EditText etTitulo, etDescripcion, etPrecio, etPoster;
+    AppDatabaseDataSource dataSource;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = findViewById(R.id.inicio_toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        etTitulo = findViewById(R.id.etTitulo);
+        etDescripcion = findViewById(R.id.etDescripcion);
+        etPrecio = findViewById(R.id.etAnho);
+        etPoster = findViewById(R.id.etPoster);
 
-        List<pedidos> zpedidos = new ArrayList();
-        zpedidos.add(new pedidos(R.drawable.play," PLAY 4","entrega en Huancayo"));
-        zpedidos.add(new pedidos(R.drawable.silla,"Silla gamer 360","entrega en Tacna"));
-        zpedidos.add(new pedidos(R.drawable.tv,"Tv 45","entrega en Cusco"));
-
-        ListAdapter adapter = new ListAdapter(zpedidos, this);
-        RecyclerView ListaPedidos = findViewById(R.id.Recicler_view_lista);
-        ListaPedidos.setLayoutManager(new LinearLayoutManager(this));
-        ListaPedidos.setAdapter(adapter);
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_lista, menu);
-        return true;
+        dataSource = new AppDatabaseDataSource(this);
     }
 
-    @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item){
-        switch (item.getItemId()){
+    public void agregar(View view) {
+        String titulo, descripcion;
+        int anho, poster;
 
-            case R.id.item1:
-                Intent intentCompras = new Intent(getApplicationContext(),listaDeCompras.class);
-                startActivity(intentCompras);
-                return true;
-        }
-        return super.onOptionsItemSelected(item);
+        titulo = etTitulo.getText().toString();
+        descripcion = etDescripcion.getText().toString();
+        anho = Integer.parseInt(etPrecio.getText().toString());
+        poster = Integer.parseInt(etPoster.getText().toString());
+
+        Pedidos pedidos = new Pedidos(titulo, descripcion, anho, poster);
+        dataSource.crearPedidos(pedidos);
+        Toast.makeText(getApplicationContext(), "Pedido seleccionado", Toast.LENGTH_SHORT).show();
+    }
+
+    public void mostrar(View view) {
+        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+        startActivity(intent);
     }
 }
