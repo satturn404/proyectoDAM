@@ -14,14 +14,14 @@ public class Pedidos {
     private String descripcion;
 
     @ColumnInfo(name = "año")
-    private int anho;
+    private int precio;
 
     private int poster;
 
-    public Pedidos(String titulo, String descripcion, int anho, int poster) {
+    public Pedidos(String titulo, String descripcion, int precio, int poster) {
         this.titulo = titulo;
         this.descripcion = descripcion;
-        this.anho = anho;
+        this.precio = precio;
         this.poster = poster;
     }
 
@@ -49,12 +49,12 @@ public class Pedidos {
         this.descripcion = descripcion;
     }
 
-    public int getAnho() {
-        return anho;
+    public int getPrecio() {
+        return precio;
     }
 
-    public void setAnho(int anho) {
-        this.anho = anho;
+    public void setPrecio(int precio) {
+        this.precio = precio;
     }
 
     public int getPoster() {
@@ -71,7 +71,7 @@ public class Pedidos {
                 "id=" + id +
                 ", titulo='" + titulo + '\'' +
                 ", descripcion='" + descripcion + '\'' +
-                ", anho=" + anho +
+                ", precio=" + precio +
                 ", poster=" + poster +
                 '}';
     }

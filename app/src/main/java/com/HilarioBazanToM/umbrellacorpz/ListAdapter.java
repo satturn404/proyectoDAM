@@ -44,12 +44,13 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
-        TextView titulo, descripcion;
+        TextView titulo, descripcion,precio;
         ImageView imagen;
         Button btnEliminar, btnVer;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             titulo = itemView.findViewById(R.id.tvTitulo);
+            precio  =itemView.findViewById(R.id.tvPrecio);
             descripcion = itemView.findViewById(R.id.tvDescripcion);
             imagen = itemView.findViewById(R.id.imagen);
             btnEliminar = itemView.findViewById(R.id.btEliminar);
@@ -57,8 +58,8 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
         }
 
         public void juntarData(Pedidos item){
-            String new_titulo = item.getTitulo()+ "("+item.getAnho()+")";
-            titulo.setText(new_titulo);
+            titulo.setText(item.getTitulo());
+            precio.setText("S/. "+item.getPrecio());
             descripcion.setText(item.getDescripcion());
             item.setPoster(R.drawable.iconic1);
             imagen.setImageResource(item.getPoster());

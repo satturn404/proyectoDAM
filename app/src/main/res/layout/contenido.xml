@@ -47,6 +47,15 @@
                 android:text="Descripción"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
+            <TextView
+                android:id="@+id/tvPrecio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Descripción"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
