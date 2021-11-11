@@ -1,6 +1,7 @@
 package com.HilarioBazanToM.umbrellacorpz;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -39,15 +41,16 @@ public class login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<QuerySnapshot> task) {
                         if(task.isSuccessful()) {
                             if (task.getResult().isEmpty()) {
-                                Log.d("REROR","usuario y/o contraseña no coinciden 1");
+                                Toast.makeText(getApplicationContext(), "usuario no coincide", Toast.LENGTH_SHORT).show();
                             }else {
 
                                 for (QueryDocumentSnapshot document : task.getResult()) {
                                     if (pass.equals(document.getData().get("clave"))) {
-                                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                                        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+                                        Toast.makeText(getApplicationContext(), "Escoja pedido a atender", Toast.LENGTH_LONG).show();
                                         startActivity(intent);
                                     }else{
-                                        Log.d("REROR","usuaio y/o contraseña no coinciden2");
+                                        Toast.makeText(getApplicationContext(), "contraseña no coincide", Toast.LENGTH_SHORT).show();
                                     }
                                 }
                             }
@@ -61,5 +64,7 @@ public class login extends AppCompatActivity {
 
 
     }
+
+
 
 }

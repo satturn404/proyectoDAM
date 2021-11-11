@@ -7,4 +7,18 @@
         app:showAsAction="always"
         android:icon="@drawable/ic_carrito_white"
         />
+
+    <item
+        android:id="@+id/item2"
+        android:title="actualizar"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_actualizar"
+        />
+
+    <item
+        android:id="@+id/item3"
+        android:title="Cerrar sesión"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_action_cerrarsesion"
+        />
 </menu>

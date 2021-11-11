@@ -72,9 +72,11 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
                     view.getContext().startActivity(intent);
                 }
             });
-            btnVer.setOnClickListener(new  View.OnClickListener() {
+            btnVer.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    AppDatabaseDataSource dataSource = new AppDatabaseDataSource(view.getContext());
+                    dataSource.eliminarPedidos(item);
                     Intent intent = new Intent(view.getContext(), MainActivity3.class);
                     intent.putExtra("id", item.getId());
                     view.getContext().startActivity(intent);

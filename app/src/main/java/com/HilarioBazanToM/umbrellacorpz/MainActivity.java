@@ -1,10 +1,15 @@
 package com.HilarioBazanToM.umbrellacorpz;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -23,28 +28,27 @@ public class MainActivity extends AppCompatActivity {
 
         etTitulo = findViewById(R.id.etTitulo);
         etDescripcion = findViewById(R.id.etDescripcion);
-        etPrecio = findViewById(R.id.etAnho);
+        etPrecio = findViewById(R.id.etPrecio);
         etPoster = findViewById(R.id.etPoster);
-
         dataSource = new AppDatabaseDataSource(this);
     }
 
     public void agregar(View view) {
         String titulo, descripcion;
-        int anho, poster;
+        int precio, poster;
 
         titulo = etTitulo.getText().toString();
         descripcion = etDescripcion.getText().toString();
-        anho = Integer.parseInt(etPrecio.getText().toString());
+        precio = Integer.parseInt(etPrecio.getText().toString());
         poster = Integer.parseInt(etPoster.getText().toString());
 
-        Pedidos pedidos = new Pedidos(titulo, descripcion, anho, poster);
+        Pedidos pedidos = new Pedidos(titulo, descripcion, precio, poster);
         dataSource.crearPedidos(pedidos);
         Toast.makeText(getApplicationContext(), "Pedido seleccionado", Toast.LENGTH_SHORT).show();
     }
 
     public void mostrar(View view) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
-        startActivity(intent);
+        Intent intMostrar = new Intent(getApplicationContext(), MainActivity2.class);
+        startActivity(intMostrar);
     }
 }

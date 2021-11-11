@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/black"
     tools:context=".MainActivity4">
 
     <include
@@ -14,133 +15,150 @@
 
     <EditText
         android:id="@+id/etNombre"
-        android:layout_width="189dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginEnd="158dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="44dp"
+        android:background="#FDFEFE"
         android:ems="10"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="220dp" />
-
-    <EditText
-        android:id="@+id/etPais"
-        android:layout_width="90dp"
-        android:layout_height="46dp"
-        android:layout_marginEnd="40dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/etNombre"
-        tools:ignore="TouchTargetSizeCheck"
-        tools:layout_editor_absoluteY="220dp" />
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
     <EditText
         android:id="@+id/etContraseña"
-        android:layout_width="191dp"
+        android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="158dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="44dp"
+        android:background="#FDFEFE"
         android:ems="10"
         android:inputType="number"
         android:minHeight="48dp"
+        android:textColor="@color/red"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etNombre"
-        tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
-
-    <EditText
-        android:id="@+id/etValidarcontraseña"
-        android:layout_width="194dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="48dp"
-        android:layout_marginEnd="158dp"
-        android:ems="10"
-        android:inputType="textPassword"
-        android:minHeight="48dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etContraseña"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/verificar"
-        android:layout_width="137dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginEnd="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
         android:onClick="paginaInicio"
         android:text="continuar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.85"
         app:layout_constraintStart_toEndOf="@+id/guardar"
-        app:layout_constraintTop_toBottomOf="@+id/etValidarcontraseña" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="83dp"
         android:layout_height="25dp"
         android:layout_marginStart="43dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginTop="12dp"
         android:text="contraseña"
-        app:layout_constraintBottom_toTopOf="@+id/etContraseña"
+        android:textColor="@color/white"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/etNombre"
-        app:layout_constraintVertical_bias="1.0" />
-
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="43dp"
-        android:layout_marginTop="12dp"
-        android:text="confirmar contraseña"
-        app:layout_constraintBottom_toTopOf="@+id/etValidarcontraseña"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.003"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etContraseña"
-        app:layout_constraintVertical_bias="0.235" />
+        app:layout_constraintTop_toBottomOf="@+id/etNombre" />
 
     <Button
         android:id="@+id/guardar"
-        android:layout_width="116dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="60dp"
-        android:onClick="guardarUsuario"
-        android:text="enviar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.123"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etValidarcontraseña" />
-
-    <TextView
-        android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Asignar Repartidor"
-        app:layout_constraintBottom_toTopOf="@+id/etNombre"
-        app:layout_constraintTop_toBottomOf="@+id/main4_toolbar"
-        tools:layout_editor_absoluteX="161dp" />
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10dp"
+        android:onClick="guardarUsuario"
+        android:text="enviar"
+        app:layout_constraintEnd_toStartOf="@+id/verificar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox3" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="68dp"
         android:text="usuario"
-        tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="228dp" />
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="16dp"
+        android:text="Cancelado"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etContraseña" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="producto roto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+
+    <CheckBox
+        android:id="@+id/checkBox4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:text="Direccion inválida"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+
+    <CheckBox
+        android:id="@+id/checkBox5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Destinatario no encontrado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="43dp"
+        android:text="Rellenar formulario "
+        android:textColor="@color/red"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/main4_toolbar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
