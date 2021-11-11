@@ -8,5 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#C30303</color>
+    <color name="greensky">#33FF36</color>
 
 </resources>

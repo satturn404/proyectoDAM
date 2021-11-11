@@ -10,7 +10,7 @@ public class AppDatabaseDataSource {
 
     public AppDatabaseDataSource(Context context) {
         AppDatabase baseDatos = AppDatabase.getInstance(context);
-        PedidosDAO = baseDatos.peliculaDAO();
+        PedidosDAO = baseDatos.pedid2DAO();
     }
 
     public void crearPedidos(Pedidos pedidos){

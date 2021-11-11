@@ -60,7 +60,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
             String new_titulo = item.getTitulo()+ "("+item.getAnho()+")";
             titulo.setText(new_titulo);
             descripcion.setText(item.getDescripcion());
-            item.setPoster(R.drawable.tv);
+            item.setPoster(R.drawable.iconic1);
             imagen.setImageResource(item.getPoster());
             btnEliminar.setOnClickListener(new View.OnClickListener() {
                 @Override

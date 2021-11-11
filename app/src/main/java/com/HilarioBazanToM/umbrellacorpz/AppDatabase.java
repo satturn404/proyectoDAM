@@ -8,7 +8,7 @@ import androidx.room.RoomDatabase;
 
 @Database(entities = {Pedidos.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
-    private static final String DB_NAME = "peliculas.db";
+    private static final String DB_NAME = "pedidos.db";
     private static AppDatabase INSTANCIA = null;
 
     public static AppDatabase getInstance(Context context) {
@@ -25,5 +25,5 @@ public abstract class AppDatabase extends RoomDatabase {
         return INSTANCIA;
     }
 
-    public abstract pedidosDAO peliculaDAO();
+    public abstract pedidosDAO pedid2DAO();
 }
