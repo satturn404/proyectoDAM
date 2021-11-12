@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
 
         Pedidos pedidos = new Pedidos(titulo, descripcion, precio, poster);
         dataSource.crearPedidos(pedidos);
-        Toast.makeText(getApplicationContext(), "Pedido seleccionado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), "Pedido Agregado a la Lista", Toast.LENGTH_SHORT).show();
     }
 
     public void mostrar(View view) {
