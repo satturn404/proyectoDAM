@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
+    android:layout_height="70dp"
     android:background="?attr/colorPrimary">
 
     <ImageView
@@ -14,8 +14,8 @@
 
     <ImageView
 
-        android:layout_width="100dp"
-        android:layout_height="40dp"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:src="@drawable/altoke"
         android:layout_margin="10sp"

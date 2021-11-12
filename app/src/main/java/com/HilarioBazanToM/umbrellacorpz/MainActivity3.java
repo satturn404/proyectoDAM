@@ -26,6 +26,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     public void continuarP(View view) {
         Intent intentrecarga = new Intent(getApplicationContext(),MainActivity2.class);
+        Toast.makeText(getApplicationContext(), "Pedido Entregado con Exito", Toast.LENGTH_SHORT).show();
         startActivity(intentrecarga);
     }
 }

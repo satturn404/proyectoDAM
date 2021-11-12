@@ -21,11 +21,12 @@ public class MainActivity4 extends AppCompatActivity {
     }
 
     public void guardarUsuario(View view) {
-
+        Toast.makeText(getApplicationContext(), "Formulario Enviado con Éxito", Toast.LENGTH_SHORT).show();
     }
 
     public void paginaInicio(View view) {
-        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        Intent intent = new Intent(getApplicationContext(), MainActivity2.class);
+        Toast.makeText(getApplicationContext(), "Pedido Cancelado", Toast.LENGTH_SHORT).show();
         startActivity(intent);
     }
 }
